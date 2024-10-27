@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/solver/static/css/main.cd96643e.css",
+    "main.js": "/solver/static/js/main.39e4199e.js",
+    "index.html": "/solver/index.html",
+    "main.cd96643e.css.map": "/solver/static/css/main.cd96643e.css.map",
+    "main.39e4199e.js.map": "/solver/static/js/main.39e4199e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cd96643e.css",
+    "static/js/main.39e4199e.js"
+  ]
+}
