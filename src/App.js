@@ -1,23 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { parseInput, solvePyramid } from "./solver";
+import FileUpload from "./FileUpload";
+import Tree from "./Tree";
 
 function App() {
+  const [fileContent, setFileContent] = useState("");
+
+  const handleFileContent = (content) => {
+    setFileContent(content);
+  };
+
+  const handleGoBack = () => {
+    setFileContent("");
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {fileContent ? (
+        <Display fileContent={fileContent} onGoBack={handleGoBack} />
+      ) : (
+        <FileUpload onFileContent={handleFileContent} />
+      )}
+    </div>
+  );
+}
+
+function Display({ fileContent, onGoBack }) {
+  const { target, pyramid } = parseInput(fileContent);
+  console.log(pyramid, target);
+  const solution = solvePyramid(pyramid, target);
+  return (
+    <div className="file-content">
+      {solution === "" ? (
+        <h2>No solution found</h2>
+      ) : (
+        <>
+          <Tree levels={pyramid} path={solution} />
+          <h2>Solution:</h2>
+          <pre>{solution}</pre>
+        </>
+      )}
+      <button className="go-back-button" onClick={onGoBack}>
+        Another pyramid 🐪
+      </button>
     </div>
   );
 }

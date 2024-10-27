@@ -1,0 +1,45 @@
+.tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.node {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+  font-weight: bold;
+  border: 2px solid #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.node.highlighted {
+  background-color: #61dafb;
+  border-color: #2196f3;
+  color: white;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
