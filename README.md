@@ -4,6 +4,7 @@ I implemented two solvers:
 
 1. A Node.js script to solve the pyramids
 2. A simple React app to visualize the solutions
+https://beasleydog.github.io/solver/
 
 ## Running the Node.js Script
 
