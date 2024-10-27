@@ -6,6 +6,13 @@ I implemented two solvers:
 2. A simple React app to visualize the solutions
 https://beasleydog.github.io/solver/
 
+
+
+
+https://github.com/user-attachments/assets/2df59546-2824-454e-97b6-d2d8ef81aef7
+
+
+
 ## Running the Node.js Script
 
 To run the Node.js script:
